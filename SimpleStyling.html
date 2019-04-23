@@ -1,11 +1,14 @@
-<html><body>
+<html><head><title>Simple Styling With HTML and CSS</title></head>
+<body>
 
 <h1>Simple Styling</h1>
-
+<p>
 HTML and CSS are used side-by-side, and this can be confusing, but many keywords are similar. 
 CSS usually is indicated by keyword STYLE, and everything in simple angle-bracket tags is HTML.
+</p>
+
 Here is a table with the most common tags (better viewed in HTML unless using this as a reference to make tables):
-<table>
+<table style="background-color: #ccc; margin: 12px;">
 <tr> <th colspan="3"> Basic HTML tags for formatting </th>      </tr>
 <tr> <th>Name</th>        <th>Open</th>          <th>Close</th> </tr>
 <tr> <td>Bold:</td>       <td> &lt; B &gt; </td>  <td>&lt; /B &gt; </td> </tr>
@@ -14,26 +17,45 @@ Here is a table with the most common tags (better viewed in HTML unless using th
 <tr> <td>Paragraph:</td>  <td> &lt; P &gt; </td>  <td>&lt; /P &gt; </td> </tr>
 </table>
 
+<h2>Alignment Methods</h2>
 <p>
-Alignment Method 1: Used to be done with tags like LEFT and CENTER to do this with HTML (instead of CSS),
-but they don't always work now, and can conflict strangely with other tags.
+<h3>Method 1</h3>
+Alignment used to be done with tags like LEFT and CENTER to do this with HTML (instead of CSS),
+but they don't always work now, and can conflict strangely with other tags. CENTER is the most reliable.
 <left>Left aligned with LEFT tag</left>
 <center>Center aligned with CENTER tag</center>
 <right>Right aligned with RIGHT tag</right>
 </p>
 
 <div>
-Alignment Method 2: can also sometimes be done with the align option.
-<p align="left">Text stuck to left side.</p>
-<p align="center">Text centered</p>
+<h3>Method 2</h3>
+Use the align="" modifer within an element's tag to adjust alignment in that element.
+<p align="left">Text stuck to left side of this element.</p>
+<p align="center">Text centered within this element (not necessarily centered in the window)</p>
+<p align="right">Text stuck to right side of this element.</p>
 </div>
 
 <div>
-Alignment Method 3: using style="" to in-line CSS
+<h3>Method 3</h3>
+Using style="" to in-line CSS, using the text-align property within style.
 <p style="text-align: left">For left alignment.</p>
-<p style="text-align: right">For right alignment.</p>
 <p style="text-align: center">For centered text.</p>
-<p style="text-align: justify">For width-filling justified text</p>
+<p style="text-align: right">For right alignment.</p>
+<p style="text-align: justify">
+For width-filling justified text. To test this (and other effects only noticable with big blocks of text),
+people often use a paragraph of Latin known as "Lorem Ipsem" or "lipsum" for short.
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</p>
+</div>
+
+<div style="background:#aaa; padding: 12px; margin: 8px; border-radius: 8px;">
+<p>Big quotes, however, sometimes look better in BLOCKQUOTE tags. To make things look even more text-booky,
+text setting up a block quote and the attribution are often grouped together within a stylized div. This one has rounded corners with "border-radius: 8px" specified within the div's style="" property.</p>
+<label>
+<blockquote style="text-align:justify; line-spacing: 150%;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</blockquote>
+Cicero</label>
 </div>
 
 <p>
@@ -45,9 +67,9 @@ then, regardless of list type, list items are designated between LI tags
 <h3>List Tips</h3>
 <ul>
   <li>Use H or LABEL to title a list.</li>
-  <li>Use li for every item.</li>
+  <li>Use LI for every item.</li>
   <li>Use tabs to format lists, even though that won't show up when the HTML is rendered.</li>
-  <li>Don't put spaces after the opening li tags.</li>
+  <li>Don't put spaces after the opening LI tags.</li>
 </ul>
 
 <label>More List Tips
@@ -65,40 +87,66 @@ then, regardless of list type, list items are designated between LI tags
 
 
 <h2>Div and Span</h2>
-<div>
 
 Before Div<div color="green"> Div is used when you want this section to be on its own lines 
 (even if the HTML source has stuff on the same line) </div> After Div.
 
-Before Span<span style=" color:white; background:black; "> Span is used when you want a section 
+Before Span <span style=" color:white; background:black; ">Span is used when you want a section 
 designated to share lines with what's around it. </span> After Span.
 
-CSS classes can be used to give Ps and DIVs and SPANs and lists consistent themes.
-These are often declared in <style></style> sections.
-Inside this section CSS rules apply, like using : instead of = or ending each line with ;
+<br>If opening and closing divs gets confusing, line break tag BR can be used instead. Use two to skip a line.<br><br>
 
+<div style="width: 60%; margin: 0 auto;">
+	Divs can be given a specific width in pixels or an element-relative width in percentages.
+	It is a bit strange, but divs are usually centered horizontally by specifying the margin as 0
+	on top and bottom, and "auto" for left and right.<br><br>
+	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 </div>
+<br><br>
 
+CSS classes can be used to give Ps and DIVs and SPANs and lists consistent themes.
+These are often declared in STYLE sections.
+Inside this section CSS rules apply, like using : instead of = or ending each line with ;
+<br>
+These style sections can appear anywhere in the text, including at the bottom, and most browsers will still apply that style everywhere.
+To be safe, though, most often times STYLE sections are put in the HEAD section of the page, or at the top of the BODY section (but not inbetween).
+The STYLE section in the HTML source after this line of text is used to modify colors and borders in the elements that follow.
 <style>
   .myBoxStyle{
     background: grey;
     color: cyan;
     border-style: solid;
     border-width: 4px;
-    border-color: rgb(255, 0, 255);
-    font-size: 150%;
+    border-color: rgb(255, 0, 128);
+    font-size: 125%;
   }
   
   .myBoxStyle > p {
     background: rgb(100, 100, 100);
     text-indent: 4em;
-  }
+	}
+	
+	a{ color: #7F7;}
+	a:active{ color: #FF7;}
+	a:hover{ color: #7FF;}
+	a:visited{ color: #777;}
+	
+	* {
+		font-family: sans-serif;
+	}
+	
+	h1, h2, h3, h4 {
+		font-family: serif;
+	}
+	
 </style>
-
+<br>
 <div class="myBoxStyle">
-  <p>This paragraph has the formatting specified within .myBoxStyle &gt; p  
+  <p>This paragraph has the formatting specified within ".myBoxStyle &gt; p"  
   because it is a P element inside your element with myBodyStyle.</p>
   <p>This paragraph should also get the same formatting as the one above.</p>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p>
 </div>
 
 <div class="myBoxStyle">
