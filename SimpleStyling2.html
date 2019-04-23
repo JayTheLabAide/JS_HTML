@@ -1,0 +1,161 @@
+<html><head><title>Simple Styling With HTML and CSS</title></head>
+<body>
+
+<h1>Simple Styling 2</h1>
+<p>
+HTML and CSS are used side-by-side, and this can be confusing, especially seeing all the &lt; and &gt; signs everywhere,
+but most keywords are only a few characters long and/or have meaningful names which helps you remember what they're for.
+HTML is always within angle brackets. CSS usually is differentiated with the keyword STYLE, but more on that later.
+</p>
+
+<table style="background-color: #ccc; margin: 12px;">
+<caption> Basic HTML tags for formatting </caption>
+<tr> <th>Name</th>        <th>Open</th>          <th>Close</th> </tr>
+<tr> <td>Bold:</td>       <td> &lt;B&gt; </td>  <td>&lt;/B&gt; </td> </tr>
+<tr> <td>Italics:</td>    <td> &lt;I&gt; </td>  <td>&lt;/I&gt; </td> </tr>
+<tr> <td>Underline:</td>  <td> &lt;U&gt; </td>  <td>&lt;/U&gt; </td> </tr>
+</table>
+
+<h2>Alignment Methods</h2>
+<p>Alignment is a property you can alter in a few different elements which all act as text boxes. There are two reliable ways to do this. The first uses just HTML. The second is used with the style property, and therefore uses CSS syntax. Why are there two systems for doing nearly the same things? I don't know, it's dumb, and it will probably end up being replaced and simplified by something more sensible in the future.</p>
+
+<h3>Method 1</h3>
+Use align="whatever" within an element's tag to adjust alignment in that element.<br><br>
+<code align="left"> &lt;code align="left"&gt;Text between CODE tags gets aligned. (CODE tags just look like code, they don't represent any specific programming language).&lt;/code&gt;</code><br><br>
+<div align="center">&lt;div align="center"&gt;Text between DIV tags gets aligned&lt;/div&gt;</div>
+<h3 align="right">&lt;h3 align="right"&gt;Even text between H tags gets aligned&lt;/h3&gt;</h3>
+<p align="justify">&lt;p align="justify"&gt;
+	This text should fill the width of the text box. All these different alignment options can be used in P, DIV, H, ARTICLE, CODE, and most tags related to text. Unfortunately this alignment property does not work within a SPAN tag, which you will learn more about later. The reason this doesn't work in SPAN is because those are only as big as the text inside the opening and closing tags, and so there is no space on either side of the text to align. CODE elements, which use monospaced fonts by default, can't use justified alignment because that violates the fixed spacing of the font.
+&lt;/p&gt;
+</p>
+<div>
+<h3>Method 2</h3>
+Using style="text-align: something" to in-line CSS.
+<p style="text-align: left">&lt;p style="text-align: left"&gt;Text between P Tags&lt;/p&gt;</p>
+<p style="text-align: center">&lt;p style="text-align: center"&gt;Text between P Tags&lt;/p&gt;</p>
+<p style="text-align: right">&lt;p style="text-align: right"&gt;Text between P Tags&lt;/p&gt;</p>
+<p style="text-align: justify">
+For width-filling justified text. To test this (and other effects only noticable with big blocks of text),
+people often use a paragraph of Latin known as "Lorem Ipsem" or "lipsum" for short.
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</p>
+</div>
+
+<div style="background:#aaa; padding: 12px; margin: 8px; border-radius: 8px;">
+<p>Big quotes, however, sometimes look better in BLOCKQUOTE tags. To make things look even more text-booky,
+text setting up a block quote and the attribution are often grouped together within a stylized div. This one has rounded corners with "border-radius: 8px" specified within the div's style="" property.</p>
+<label>
+<blockquote style="text-align:justify; line-spacing: 150%;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</blockquote>
+Cicero</label>
+</div>
+
+<p>
+Lists are done as ordered or unordered with the tags OL and UL
+then, regardless of list type, list items are designated between LI tags
+</p>
+
+<h2>List Examples:</h2>
+<h3>List Tips</h3>
+<ul>
+  <li>Use H or LABEL to title a list.</li>
+  <li>Use LI for every item.</li>
+  <li>Use tabs to format lists, even though that won't show up when the HTML is rendered.</li>
+  <li>Don't put spaces after the opening LI tags.</li>
+</ul>
+
+<label>More List Tips
+<ol>
+  <li>Lists can hold links, images, buttons, etc.</li>
+  <li>Lists can even be put inside other list item tags.</li>
+  <li>Inner lists can be same or different type:
+      <ul>
+        <li>Unordered lists</li>
+        <li>Ordered lists</li>
+      </ul>
+  </li>
+</ol>
+</label>
+
+
+<h2>Div and Span</h2>
+
+[Text Before DIV]<div color="green"> DIV is used when you want this section to be on its own lines, in its own text box (even if the HTML source has stuff on the same line as the DIV tags) </div>[Text After DIV]
+
+[Text Before SPAN] <span style=" color:yellow; background:blue; ">SPAN is used when you don't want text to be in a separate paragraph, but instead want to alter or highlight just one section of a paragraph.</span> [Text After SPAN]
+
+<br>If opening and closing DIV or P tags just to put things in their own paragraphs gets confusing, you can always just use the line break tag &lt;BR&gt; all over the place Use two to skip a line, like this: &lt;br&gt;&lt;br&gt;<br><br>The cousin of the BR tag is &lt;HR&gt; or Horizontal Rule, which creates a segment break with a line.<hr>
+
+<div style="width: 60%; margin: 0 auto;">
+	&lt;div style="width: 60%; margin: 0 auto;"&gt;
+	Divs can be given a specific width in pixels or an element-relative width in percentages. Here, within the style property, we set the width to 60% of the parent element. We also set the margin around the DIV to 0 on the top and bottom, and auto on the sides (which centers the DIV)<br><br>
+	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+&lt;/div&gt;</div>
+<br>
+<h2>Easy CSS Code Reuse with Classes</h2>
+CSS classes can be used to give Ps and DIVs and SPANs and lists consistent themes, and to save yourself re-typing the same properties set to the same values.
+These are often declared in STYLE sections.
+Inside this section CSS rules apply, like using : instead of = or ending each line with ;
+<br>
+These style sections can appear anywhere in the text, including at the bottom, and most browsers will still apply that style everywhere.
+To be safe, though, most often times STYLE sections are put in the HEAD section of the page, or at the top of the BODY section (but not inbetween).
+The STYLE section in the HTML source after this line of text is used to modify colors and borders in the elements that follow.
+<style>
+  .myBoxStyle{
+    background: grey;
+    color: cyan;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(255, 0, 128);
+    font-size: 125%;
+  }
+  
+  .myBoxStyle > p {
+    background: rgb(100, 100, 100);
+    text-indent: 4em;
+	}
+	
+	a{ color: #7F7;}
+	a:active{ color: #FF7;}
+	a:hover{ color: #7FF;}
+	a:visited{ color: #777;}
+	
+	* {
+		font-family: sans-serif;
+	}
+	
+	h1, h2, h3, h4 {
+		font-family: serif;
+	}
+	
+	code{ font-family: monospace;}
+	
+</style>
+<br>
+<div class="myBoxStyle">
+  <p>This paragraph has the formatting specified within ".myBoxStyle &gt; p"  
+  because it is a P element inside your element with myBodyStyle.</p>
+  <p>This paragraph should also get the same formatting as the one above.</p>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p>
+</div>
+<p>Classless text between these DIVs will have default formatting.<p>
+<div class="myBoxStyle">
+  <ul>
+    <li>Multiple Divs can have the same class.</li>
+    <li>The overall style will apply even if you don't use any P elements in this div.</li>
+    <li>Tags can be upper or lower-case, but class names are case-specific</li>
+  </ul>
+</div>
+
+<h2>Links and Images</h2>
+<p>
+One of the best sites for reference for CSS is <a href="https://www.w3schools.com/css/default.asp">W3Schools CSS Tutorial</a>.
+Their specific page for styling links in different activity states (like hover, active, and visited) is
+<a href="https://www.w3schools.com/css/css_link.asp">here</a>.
+</p>
+
+<img src="someFolderName/imageFolderName/img001.png" alt="This is alt text which displays when you have a broken image link :(" />
+
+</body></html>
